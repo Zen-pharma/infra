@@ -14,6 +14,9 @@ module "eks" {
   enable_irsa                              = true
   enable_cluster_creator_admin_permissions = true
 
+  create_kms_key    = false
+  encryption_config = null
+
   addons = {
     vpc-cni = {
       most_recent    = true

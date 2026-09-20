@@ -32,7 +32,7 @@ module "rds" {
   identifier = "${var.project}-${var.env}-postgres"
 
   engine               = "postgres"
-  engine_version       = "17.9"
+  engine_version       = "17.5"
   family               = "postgres17"
   major_engine_version = "17"
   instance_class       = var.instance_class
@@ -56,7 +56,8 @@ module "rds" {
   deletion_protection     = var.deletion_protection
   publicly_accessible     = false
 
-  create_db_option_group = false
+  create_db_option_group          = false
+  parameter_group_use_name_prefix = false
 
   tags = {
     Name    = "${var.project}-${var.env}-postgres"

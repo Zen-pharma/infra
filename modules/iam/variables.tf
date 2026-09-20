@@ -1,5 +1,5 @@
 variable "project" {
-  description = "Project name"
+  description = "Microservice Project"
   type        = string
 }
 

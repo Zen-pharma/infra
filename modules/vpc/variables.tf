@@ -1,5 +1,5 @@
 variable "project" {
-  description = "Project name"
+  description = "microservice-project"
   type        = string
 }
 
@@ -11,7 +11,7 @@ variable "env" {
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+  default     = "ap-southeast-1"
 }
 
 variable "vpc_cidr" {
