@@ -1,4 +1,3 @@
-# ZenPharma Dev Environment — managed via GitHub Actions CI/CD
 locals {
   project = "pharma"
   env     = "dev"
@@ -19,7 +18,6 @@ module "vpc" {
   database_subnet_cidrs = ["10.0.5.0/24", "10.0.6.0/24"]
 }
 
-
 module "eks" {
   source = "../../modules/eks"
 
@@ -30,8 +28,8 @@ module "eks" {
   kubernetes_version = "1.33"
   instance_types     = ["t3.small"]
   min_size           = 1
-  max_size           = 5
-  desired_size       = 4
+  max_size           = 2
+  desired_size       = 1
 }
 
 module "rds" {
