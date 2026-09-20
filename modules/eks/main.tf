@@ -14,8 +14,8 @@ module "eks" {
   enable_irsa                              = true
   enable_cluster_creator_admin_permissions = true
 
-  create_kms_key    = false
-  encryption_config = null
+  create_kms_key              = false
+  create_cloudwatch_log_group = false
 
   addons = {
     vpc-cni = {
